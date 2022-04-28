@@ -1,0 +1,17 @@
+{
+    "name": "vite-plugins-related",
+    "version": "0.0.0",
+    "description": "vite 插件集合",
+    "main": "",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "vite-plugin",
+      "vite",
+      "vue2"
+    ],
+    "author": "yangyanhui <yyh930109@163.com>",
+    "license": "ISC"
+  }
+  
