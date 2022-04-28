@@ -1,10 +1,14 @@
 {
   "name": "vite-plugin-replace-require-variable",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "转换有变量的require函数",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangyanhui1217/vite-plugins-related/tree/main/packages/replaceRequireVariable"
   },
   "keywords": [
     "vite-plugin",

@@ -1,12 +1,16 @@
 {
   "name": "vite-plugin-transform__require-to-import",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "替换第三方组件里面__require方法",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "esbuild ./src/index.js --bundle --outdir=dist --format=cjs",
     "vite": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangyanhui1217/vite-plugins-related/tree/main/packages/__requireToImport"
   },
   "author": "yangyanhui",
   "license": "ISC",
