@@ -52,8 +52,9 @@ const transformCode = (code, id) => {
 				importNodeList = importNodes
 				objNodes = objNode
 				// replace varible
-        if (objNodes)
-				  path.replaceWith(t.memberExpression(t.identifier(fileObj), requireArgs, true))
+        if (objNodes) {
+					path.replaceWith(t.memberExpression(t.identifier(fileObj), requireArgs, true))
+				}
 			}
 		},
 		exit(path) {

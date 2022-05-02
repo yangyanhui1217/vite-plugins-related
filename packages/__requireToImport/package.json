@@ -1,12 +1,11 @@
 {
   "name": "vite-plugin-transform__require-to-import",
-  "version": "1.0.9",
+  "version": "1.1.2",
   "description": "替换第三方组件里面__require方法",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild ./src/index.js --bundle --outdir=dist --format=cjs",
-    "vite": "vite"
+    "build": "esbuild ./src/index.js --bundle --outdir=dist --format=cjs"
   },
   "repository": {
     "type": "git",
@@ -15,15 +14,17 @@
   "author": "yangyanhui",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/parser": "^7.17.10",
+    "@babel/traverse": "^7.17.10",
+    "@babel/types": "^7.17.10"
+  },
+  "devDependencies": {
     "esbuild": "^0.14.38"
   },
   "keywords": [
     "vite-plugin",
     "vite",
     "esbuild"
-  ],
-  "devDependencies": {
-    "vite": "^2.9.5",
-    "vite-plugin-vue2": "^2.0.0"
-  }
+  ]
 }
