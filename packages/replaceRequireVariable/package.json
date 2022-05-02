@@ -1,10 +1,11 @@
 {
   "name": "vite-plugin-replace-require-variable",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "description": "转换有变量的require函数",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild ./src/index.js --bundle --outdir=dist --platform=node --format=cjs"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,14 @@
   "author": "yangyanhui",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/generator": "^7.17.10",
+    "@babel/parser": "^7.17.10",
+    "@babel/traverse": "^7.17.10",
+    "@babel/types": "^7.17.10",
     "glob": "^8.0.1"
   },
   "devDependencies": {
-    "vite": "^2.9.5"
+    "esbuild": "^0.14.38"
   }
 }

@@ -2,8 +2,13 @@
 
 ```
 // vite+vue2的项目 转换包含变量的require函数
-
+// v1.0.x仅支持这一种（即只支持vite-plugin-vue2@1.x.x）
 require(("../../assets/img/" + _vm.filePath + ".png"))
+
+// v1.1.1以上版本又支持了下边两种场景，即也兼容了vite-plugin-vue2@2.x.x
+require("../../assets/img/icon_".concat(_vm.fileType, ".png"))
+require(`../../assets/img/icon_${_vm.fileType}.png`)
+
 ```
 
 ##### 安装
