@@ -8,7 +8,7 @@ component: resolve => require(["../views/index"], resolve)
 ##### 安装
 
 ```
-npm install vite-plugin-lazy-require-import -D
+npm install vite-plugin-dynamic-require-import -D
 ```
 
 ##### 用法
@@ -16,13 +16,13 @@ npm install vite-plugin-lazy-require-import -D
 ```
 // 在 vite.config.js 里面使用
 
-import { lazyRequireImport } from 'vite-plugin-lazy-require-import'
+import { dynamicRequireToImport } from 'vite-plugin-dynamic-require-import'
 
 // 使用
 export default defineConfig({
     plugins: [
         {
-            lazyRequireImport(), // 参数：正则，默认 /.js|.jsx/
+            dynamicRequireToImport(), // 参数：正则，默认 /.js|.jsx/
         }
     ]
 })
@@ -33,5 +33,5 @@ export default defineConfig({
 ```
 component: resolve => require(["../views/index"], resolve)
 转换成
-component: () => import("../views/index")
+component: () => import("../views/index.vue")
 ```

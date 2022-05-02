@@ -1,13 +1,13 @@
 const { transformCode } = require('./transform')
 
 /**
- * 将require懒加载转换为import懒加载
- * includes 需要替换的文件后缀名数组
+ * 将require动态加载转换为import懒加载
+ * filters 需要替换的文件后缀名数组
  * @returns
  */
-const lazyRequireImport = (filters = /(.js|.jsx)$/) => {
+const dynamicRequireToImport = (filters = /(.js|.jsx)$/) => {
   return {
-    name: 'lazyRequireImport',
+    name: 'dynamicRequireToImport',
     apply: 'serve',
     transform(code, id) {
       // exclude node_modules
@@ -21,5 +21,5 @@ const lazyRequireImport = (filters = /(.js|.jsx)$/) => {
 }
 
 module.exports = {
-  lazyRequireImport
+  dynamicRequireToImport
 }
