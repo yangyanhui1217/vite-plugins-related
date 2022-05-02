@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-replace-require-variable",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "转换有变量的require函数",
   "main": "src/index.js",
   "scripts": {

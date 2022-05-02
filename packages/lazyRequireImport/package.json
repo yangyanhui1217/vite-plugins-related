@@ -1,0 +1,28 @@
+{
+  "name": "vite-plugin-lazy-require-import",
+  "version": "0.0.4",
+  "description": "将require动态加载转换为import动态加载",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangyanhui1217/vite-plugins-related/tree/main/packages/lazyRequireImport"
+  },
+  "keywords": [
+    "vite-plugin",
+    "vite",
+    "require",
+    "import",
+    "lazy"
+  ],
+  "author": "yangyanhui",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/parser": "^7.17.10",
+    "@babel/traverse": "^7.17.10",
+    "@babel/types": "^7.17.10"
+  }
+}
