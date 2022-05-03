@@ -1,5 +1,5 @@
 ### vite-plugin-replace-require-variable
-##### vite+vue2 project
+##### Vite + Vue2 project
 
 ##### Situation
 
@@ -7,7 +7,7 @@
 /* v1.0.x just support (vite-plugin-vue2@1.x.x）*/
 require(("../../assets/img/" + _vm.filePath + ".png"))
 
-/* v1.1.1 after support vite-plugin-vue2@2.x.x */
+/* v1.1.x after support vite-plugin-vue2@2.x.x */
 require("../../assets/img/icon_".concat(_vm.fileType, ".png"))
 require(`../../assets/img/icon_${_vm.fileType}.png`)
 
