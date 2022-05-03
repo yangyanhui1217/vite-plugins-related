@@ -43,6 +43,7 @@ export default defineConfig({
 ##### Result
 
 ```
+/* transform */
 import a from "b"
 const obj = {
     "b": a

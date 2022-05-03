@@ -1,43 +1,42 @@
-#### 用import from 替换第三方插件里面的 __require() 方法
+### vite-plugin-transform__require-to-import
+##### Vite + Vue2 project
 
-##### 场景
+##### Situation
 
 ```
 __require(".......")
 ```
 
-##### 安装
+##### Install
 
 ```
 npm install -D vite-plugin-transform__require-to-import
 ```
 
-
-##### 用法
-
 ```
-// 在vite.config.js里面使用
-
-// 引入
+/* vite.config.js */
 import { __requireToImport } from 'vite-plugin-transform__require-to-import'
-
-// 使用
 export default defineConfig({
     plugins: [
         {
-            __requireToImport(['zui-plugins']), // 参数是第三方包名数组
+            __requireToImport(/* options */)
         }
     ]
 })
-
 ```
 
-##### 转换后的效果
+##### Options
+
+- Type: Array
+- Default: []  /* eg. [packageName].*/
+
+
+##### Result
+
 ```
 __require("....")
 
-// 转换成
+/* transform */
 
 import *** from "...."
-
 ```

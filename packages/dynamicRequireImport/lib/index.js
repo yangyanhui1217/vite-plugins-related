@@ -1,8 +1,7 @@
 const { transformCode } = require('./transform')
 
 /**
- * 将require动态加载转换为import懒加载
- * filters 需要替换的文件后缀名数组
+ * filters RegExp
  * @returns
  */
 const dynamicRequireToImport = (filters = /(.js|.jsx)$/) => {
