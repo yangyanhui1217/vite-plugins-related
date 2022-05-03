@@ -1,46 +1,52 @@
-##### 场景
+### vite-plugin-replace-require-variable
+##### vite+vue2 project
+
+##### Situation
 
 ```
-// vite+vue2的项目 转换包含变量的require函数
-// v1.0.x仅支持这一种（即只支持vite-plugin-vue2@1.x.x）
+/* v1.0.x just support (vite-plugin-vue2@1.x.x）*/
 require(("../../assets/img/" + _vm.filePath + ".png"))
 
-// v1.1.1以上版本又支持了下边两种场景，即也兼容了vite-plugin-vue2@2.x.x
+/* v1.1.1 after support vite-plugin-vue2@2.x.x */
 require("../../assets/img/icon_".concat(_vm.fileType, ".png"))
 require(`../../assets/img/icon_${_vm.fileType}.png`)
 
 ```
 
-##### 安装
+##### Install
 
 ```
 npm install vite-plugin-replace-require-variable -D
 ```
 
-##### 用法
 
 ```
-// 在 vite.config.js 里面使用
-
+/* vite.config.js */
 import { replaceRequireVariable } from 'vite-plugin-replace-require-variable'
 
-// 使用
 export default defineConfig({
     plugins: [
         {
-            replaceRequireVariable([/*.vue组件*/]), // 参数是.vue文件名
+            replaceRequireVariable(/* options */)
         }
     ]
 })
 
 ```
 
-##### 转换后的效果
+##### Options
+
+- Type: Array
+- Default: []  /* eg. ['xxx.vue'].*/
+
+
+##### Result
+
 ```
-import *** from "...."
+import a from "b"
 const obj = {
-    "....": ***
+    "b": a
 }
 
-let 变量 = obj["...."]
+let varibles = obj["b"]
 ```
