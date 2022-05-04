@@ -1,3 +1,4 @@
+// const { transformCode } = require('./transform.js')
 /**
  * 替换第三方插件里面的 __require() 方法
  * @param {*} code
@@ -12,7 +13,8 @@ export const __requireToImport = (includes = []) => {
 			let result = code
 			if (includes.some(item => id.includes(item))) {
 				if (!/\/node_modules\//g.test(id)) return result
-
+				// 该插件不适合用ast去转换，第三方插件的代码量太大
+				// result = transformCode(code)
 				const requireRegex = /_{2}require*\(\s*(["'].*["'])\s*\)/g
 				const IMPORT_STRING_PREFIX = '__require_for_vite'
 				const requireMatches = result.matchAll(requireRegex)
@@ -48,7 +50,7 @@ export const __requireToImport = (includes = []) => {
  * @param {必填，数字} length
  * @returns hash串
  */
- function randomString(length) {
+function randomString(length) {
   const code = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890'
   let result = ''
   for (let index = 0; index < length; index++) {

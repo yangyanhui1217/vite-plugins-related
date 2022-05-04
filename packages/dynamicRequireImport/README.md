@@ -20,7 +20,7 @@ import { replaceRequireVariable } from 'vite-plugin-replace-require-variable'
 export default defineConfig({
     plugins: [
         {
-            dynamicRequireToImport(/* options */), // 参数：正则，默认 /.js|.jsx/
+            dynamicRequireToImport(/* options */)
         }
     ]
 })
